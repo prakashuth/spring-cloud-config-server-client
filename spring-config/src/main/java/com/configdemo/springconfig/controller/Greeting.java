@@ -32,13 +32,13 @@ public class Greeting {
 	@RequestMapping("/greetings")
 	public String getGreetings(){
 		 
-		return greeting+listValues.size()+mapValues + userDetails.getPassword();
+		return greeting+listValues.size()+mapValues + userDetails.getPassword()+userDetails;
 		
 	}
 	@Autowired
 	Environment environment;
 
-	 @GetMapping("/env")
+	@RequestMapping("/env")
 		public String getgreeting(){
 			 
 			return environment.toString();

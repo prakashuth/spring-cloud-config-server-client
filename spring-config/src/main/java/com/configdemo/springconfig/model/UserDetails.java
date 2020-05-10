@@ -3,10 +3,12 @@ package com.configdemo.springconfig.model;
 import java.util.List;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ConfigurationProperties("user")
+@RefreshScope
 public class UserDetails {
 	
 	private List<String> details;
